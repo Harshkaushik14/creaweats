@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { COLORS, FONT_SIZE } from "../utils/styles";
 
 interface HeaderProps {
   title: string;
@@ -37,10 +38,10 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     borderBottomWidth: 1,
-    borderColor: "#E8E8E8",
+    borderColor: COLORS.borderPrimary,
   },
   title: {
-    fontSize: 16,
+    fontSize: FONT_SIZE.font16,
     fontWeight: "bold",
   },
 });

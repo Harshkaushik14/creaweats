@@ -86,7 +86,7 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.creweats"
+    namespace 'com.kaushikharsh_14.creweats'
     defaultConfig {
         applicationId 'com.kaushikharsh_14.creweats'
         minSdkVersion rootProject.ext.minSdkVersion

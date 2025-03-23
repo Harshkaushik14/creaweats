@@ -288,7 +288,7 @@ const styles = StyleSheet.create({
   },
   dateButton: {
     backgroundColor: "#fff",
-    padding: Platform.OS === "android"? 10 : 8,
+    padding: Platform.OS === "android" ? 10 : 8,
     paddingTop: Platform.OS === "android" ? 4 : 8,
     borderRadius: 20,
     flexDirection: "row",

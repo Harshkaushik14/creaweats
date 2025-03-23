@@ -13,6 +13,7 @@ import {
 
 import { router, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import { COLORS, FONT_SIZE } from "../../src/utils/styles";
 
 const Login = () => {
   const [email, setEmail] = useState<string>("");
@@ -29,7 +30,7 @@ const Login = () => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: "#EED489",
+      backgroundColor: COLORS.primary,
       alignItems: "center",
       // paddingVertical: 50,
     },
@@ -40,9 +41,9 @@ const Login = () => {
       marginBottom: 10,
     },
     title: {
-      fontSize: 24,
+      fontSize: FONT_SIZE.font24,
       fontWeight: "bold",
-      color: "#000",
+      color: COLORS.black,
     },
     image: {
       width: 280,
@@ -51,13 +52,13 @@ const Login = () => {
       marginVertical: 20,
     },
     description: {
-      fontSize: 16,
+      fontSize: FONT_SIZE.font16,
       fontWeight: "bold",
-      color: "#000",
+      color: COLORS.black,
       marginTop: 20,
     },
     subText: {
-      fontSize: 14,
+      fontSize: FONT_SIZE.font14,
       marginTop: 16,
       color: "#555",
       marginBottom: 20,
@@ -65,27 +66,27 @@ const Login = () => {
     input: {
       width: "80%",
       height: 45,
-      backgroundColor: "#fff",
+      backgroundColor: COLORS.white,
       borderRadius: 25,
       paddingHorizontal: 15,
-      fontSize: 14,
-      color: "#000",
+      fontSize: FONT_SIZE.font14,
+      color: COLORS.black,
       marginBottom: 42,
       elevation: 3, // Shadow effect for Android
-      shadowColor: "#000", // Shadow effect for iOS
+      shadowColor: COLORS.black, // Shadow effect for iOS
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.2,
       shadowRadius: 3,
     },
     button: {
-      backgroundColor: "#A68A58",
+      backgroundColor: COLORS.btnPrimary,
       paddingVertical: 12,
       paddingHorizontal: 40,
       borderRadius: 25,
     },
     buttonText: {
-      color: "#fff",
-      fontSize: 16,
+      color: COLORS.white,
+      fontSize: FONT_SIZE.font16,
       fontWeight: "bold",
     },
   });

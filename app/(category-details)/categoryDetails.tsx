@@ -11,6 +11,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { restaurants } from "@/src/utils/dummyData";
 import CommonHeader from "@/src/components/CommonHeader";
 import { useRouter } from "expo-router";
+import { COLORS, FONT_SIZE } from "@/src/utils/styles";
 
 interface Restaurant {
   id: string;
@@ -28,7 +29,7 @@ interface Restaurant {
 const RestaurantCard = ({ item }: { item: Restaurant }) => (
   <View
     style={{
-      backgroundColor: item.available ? "#fff" : "#f5f5f5",
+      backgroundColor: item.available ? COLORS.white : "#f5f5f5",
       padding: 10,
       marginVertical: 5,
       borderRadius: 10,
@@ -36,7 +37,7 @@ const RestaurantCard = ({ item }: { item: Restaurant }) => (
       alignItems: "center",
       shadowColor: "#000",
       shadowOpacity: 0.1,
-      borderColor: "#E8E8E8",
+      borderColor: COLORS.borderPrimary,
       borderWidth: 2,
       shadowRadius: 5,
       marginTop: 20,
@@ -47,9 +48,9 @@ const RestaurantCard = ({ item }: { item: Restaurant }) => (
     <View style={{ flex: 1 }}>
       <Text
         style={{
-          fontSize: 16,
+          fontSize: FONT_SIZE.font16,
           fontWeight: "400",
-          color: item.available ? "#000" : "#aaa",
+          color: item.available ? COLORS.black : "#aaa",
           marginBottom: 6,
         }}
       >
@@ -97,7 +98,7 @@ const RestaurantCard = ({ item }: { item: Restaurant }) => (
 const RestaurantList: React.FC = () => {
   const router = useRouter();
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
       <CommonHeader title="" onBackPress={() => router.back()} />
       <FlatList
         data={restaurants}
